@@ -5,6 +5,7 @@ import Public from "./public/Index"
 import HomePage from '../Pages/HomePage/HomePage';
 import AboutPage from '../Pages/AboutPage/AboutPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
+import SupportPage from '../Pages/SupportPage/SupportPage';
 
 export default function Index() {
   return (
@@ -19,6 +20,7 @@ export default function Index() {
         <Route element={<Public />}>
           <Route path='/about' element={<AboutPage />} />
           <Route path='/login' element={<LoginPage />} />
+          <Route path='/support' element={<SupportPage />} />
         </Route>
     </Routes>
   )
