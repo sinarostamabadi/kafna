@@ -19,7 +19,9 @@ export default function BasicHeader({color , logoImage , className}) {
                     </ul>
                 </div>
                 <div>
-                    <img className='w-20 sm:w-auto' src={logoImage} alt="" />
+                    <Link to={"/login"}>
+                        <img className='w-20 sm:w-auto' src={logoImage} alt="" />
+                    </Link>
                 </div>
             </div>
   )
