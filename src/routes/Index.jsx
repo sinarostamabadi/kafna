@@ -7,6 +7,8 @@ import AboutPage from '../Pages/AboutPage/AboutPage';
 import LoginPage from '../Pages/LoginPage/LoginPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import SignUpPage from '../Pages/SignUpPage/SignUpPage';
+import WelcomePage from '../Pages/WelcomePage/WelcomePage';
+import ChooseSkillPage from '../Pages/ChooseSkillPage/ChooseSkillPage';
 
 export default function Index() {
   return (
@@ -14,6 +16,8 @@ export default function Index() {
       {/* private routes */}
         <Route  element={<Private />}>
             <Route path='/' element={<HomePage />} />
+            <Route path='/welcome' element={<WelcomePage />} />
+            <Route path='/choose-skill' element={<ChooseSkillPage />} />
         </Route>
 
 
