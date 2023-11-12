@@ -148,8 +148,8 @@ export default function SignUpPage() {
                     </form>
                 </div>
             </div> :
-            <form onSubmit={handleSubmit} className='w-full grid grid-cols-2 mt-8'>
-                <div className='w-full px-36 flex flex-col justify-start items-center'>
+            <form onSubmit={handleSubmit} className='w-full flex flex-col lg:grid lg:grid-cols-2 mt-8'>
+                <div className='w-full px-6 lg:px-36 flex flex-col justify-start items-center'>
                     <img className='w-[80%]' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
                     <div className='w-[60%] mt-6'>
                         <button type='submit' className='w-full h-14 rounded-3xl bg-[#35CB00] text-2xl text-white font-yekan'>
@@ -163,7 +163,7 @@ export default function SignUpPage() {
                         </button>
                     </div>
                 </div>
-                <div className='w-full flex justify-center items-center pr-custom-padding-x'>
+                <div className='w-full h-[350px] lg:h-auto flex justify-center items-center mt-6 lg:mt-0 px-6 lg:px-0 lg:pr-custom-padding-x'>
                     <div style={{direction:"rtl"}} className='w-full h-full grid grid-cols-2 grid-rows-5 gap-x-4 gap-y-1'>
                         <div className='w-full flex flex-col gap-1'>
                             <label style={{direction:"rtl"}} className={labelClassName} htmlFor="full_name">نام و نام خانوادگی</label>
@@ -187,7 +187,7 @@ export default function SignUpPage() {
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
-                            <label className='text-base font-yekan' htmlFor="student_code">کد دانشجویی/ دانش آموزی</label>
+                            <label className='text-base font-yekan' htmlFor="student_code">کد دانشجویی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='student_code' name='"student_code' value={values.student_code} onChange={handleChange} onBlur={handleBlur} 
                             className='w-full h-full rounded-3xl bg-white px-2 text-base font-yekan'
                             />

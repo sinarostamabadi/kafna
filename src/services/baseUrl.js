@@ -1,1 +1,1 @@
-export let baseUrl="http://192.168.171.86:4000/";
+export let baseUrl="https://kafna-backend.iran.liara.run";
