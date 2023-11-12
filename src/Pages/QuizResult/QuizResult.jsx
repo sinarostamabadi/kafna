@@ -66,15 +66,15 @@ export default function QuizResult() {
             <div className='flex justify-center'>
                 <img className='w-[90%]' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
             </div>
-            <div style={{direction:"rtl"}} className='text-3xl text-white font-yekan mt-2 gap-1'>
-                <p className='flex gap-1 items-center'>
+            <div style={{direction:"rtl"}} className='text-2xl lg:text-3xl px-4 lg:px-0 text-white font-yekan mt-2 gap-1'>
+                <p className='flex gap-1'>
                     <p>
-                    {full_name}
+                    {full_name + " "}
+                      شما در آزمون رد شده اید
                     </p>
-                    <p>شما در آزمون رد شده اید</p>
                 </p>
                 <div style={{direction:"rtl"}}>
-                <div className='flex flex-col'>
+                <div className='flex flex-col px-4 lg:px-0'>
                   <p className='mt-6 font-yekan' href="https://alborz.irannsr.org">از اینجا میتونی بیشتر یاد بگیری</p>
                   <div>
                     <a href="https://7learn.com/">

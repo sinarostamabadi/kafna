@@ -1,11 +1,13 @@
 import React from 'react'
 import grayLogo from "../../assets/image/grayLogo.png"
 import Card from './components/Card/Card'
+import { Button, Navbar } from 'flowbite-react';
+import { Link } from 'react-router-dom';
 
 export default function ShopPage() {
   return (
     <div className='w-full'>
-        <header className='shadow-sm'>
+        {/* <header className='shadow-sm'>
     <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <div class="flex items-center">
@@ -45,7 +47,31 @@ export default function ShopPage() {
             </div>
         </div>
     </nav>
-        </header>
+        </header> */}
+
+<Navbar fluid className='shadow-sm sticky top-0'>
+      <Navbar.Brand href="https://flowbite-react.com">
+        <img src={grayLogo} className="mr-3 h-9 sm:h-9" />
+        <span className="self-center whitespace-nowrap text-xl font-semibold capitalize">kafna shop</span>
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <Button className='capitalize'>
+            <Link to={"/"}>
+                back to kafna
+            </Link>
+        </Button>
+        <Navbar.Toggle />
+      </div>
+      <Navbar.Collapse>
+        <Navbar.Link href="#" active>
+          Home
+        </Navbar.Link>
+        <Navbar.Link href="#">About</Navbar.Link>
+        <Navbar.Link href="#">Services</Navbar.Link>
+        <Navbar.Link href="#">Pricing</Navbar.Link>
+        <Navbar.Link href="#">Contact</Navbar.Link>
+      </Navbar.Collapse>
+    </Navbar>
 
         <div className='w-full p-6 mt-4'>
             <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
