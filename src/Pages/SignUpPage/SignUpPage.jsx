@@ -168,64 +168,65 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1'>
                             <label style={{direction:"rtl"}} className={labelClassName} htmlFor="full_name">نام و نام خانوادگی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='full_name' name="full_name" value={values.full_name} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.full_name && touched.full_name && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.full_name && touched.full_name && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="major">رشته تحصیلی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='major' name='major' value={values.major} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.major && touched.major && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.major && touched.major && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="email">ایمیل</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='email' value={values.email} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.email && touched.email && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.email && touched.email && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className='text-base font-yekan' htmlFor="student_code">کد دانشجویی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='student_code' name='"student_code' value={values.student_code} onChange={handleChange} onBlur={handleBlur} 
-                            className='w-full h-full rounded-3xl bg-white px-2 text-base font-yekan'
+                            className='w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none'
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="national_id">کد ملی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='national_id' name='national_id' value={values.national_id} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.national_id && touched.national_id && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.national_id && touched.national_id && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className='text-base font-yekan' htmlFor="parent_phone_number">شماره تماس والدین</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='parent_phone_number' name="parent_phone_number" value={values.parent_phone_number} onChange={handleChange} onBlur={handleBlur}
-                            className='w-full h-full rounded-3xl bg-white px-2 text-base font-yekan'
+                            className='w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none'
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="birth_year">تاریخ تولد</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="date" id="birth_year" name="birth_year" value={values.birth_year} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.birth_year && touched.birth_year && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.birth_year && touched.birth_year && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="institute_name">نام موسسه ی آموزشی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id="institute_name" name="institute_name" value={values.institute_name} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.institute_name && touched.institute_name && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.institute_name && touched.institute_name && "border border-red-500"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="education_year">آخرین مقطع تحصیلی</label>
                             <select style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='education_year' name="education_year" value={values.education_year} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.education_year && touched.education_year && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.education_year && touched.education_year && "border border-red-500"}`}
                             >
+                                <option value="" selected disabled>مقطع تحصیلی</option>
                                 <option value="TEN">دهم</option>
                                 <option value="ELEVEN">یازدهم</option>
                                 <option value="TWELVE">دوازدهم</option>
@@ -239,7 +240,7 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1 relative'>
                             <label className={labelClassName} htmlFor="password">رمز ورود</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='password' name='password' value={values.password} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.password && touched.password && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.password && touched.password && "border border-red-500"}`}
                             />
                             <div className='text-sm text-red-500 font-yekan absolute bottom-[-20px]'>{errors.password && touched.password && errors.password}</div>
                         </div>

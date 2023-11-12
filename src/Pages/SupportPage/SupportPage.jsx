@@ -36,7 +36,7 @@ export default function SupportPage() {
                         متن پیام پشتیبانی
                         </label>
                         <textarea value={message} onChange={handleChange} onBlur={handleBlur}
-                        className='rounded-xl outline-none text-base font-yekan p-1'
+                        className='rounded-xl outline-none text-base font-yekan p-1 border-none'
                          name="message" id="message" cols="30" rows="6" placeholder='نوشتن پیام . . .'
                          >
 
@@ -48,7 +48,7 @@ export default function SupportPage() {
                             نام و نام خانوادگی
                             </label>
                             <input value={name} onChange={handleChange} onBlur={handleBlur} 
-                            className='h-10 bg-white rounded-xl'
+                            className='h-10 bg-white rounded-xl border-none'
                             type="text" name="name" id="name" />
                         </div>
                         <div className='w-full flex flex-col'>
@@ -56,7 +56,7 @@ export default function SupportPage() {
                             ایمیل
                             </label>
                             <input value={email} onChange={handleChange} onBlur={handleBlur}
-                            className='h-10 bg-white rounded-xl'
+                            className='h-10 bg-white rounded-xl border-none'
                             type="email" name="email" id="email" />
                         </div>
                     </div>
@@ -66,7 +66,7 @@ export default function SupportPage() {
                                 شماره تلفن
                             </label>
                             <input value={phoneNumber} onChange={handleChange} onBlur={handleBlur} 
-                            className='h-10 bg-white rounded-xl'
+                            className='h-10 bg-white rounded-xl border-none'
                             type="tel" name="phoneNumber" id="phoneNumber" />
                         </div>
                         <div className='w-full mt-6'>

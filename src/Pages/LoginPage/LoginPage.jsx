@@ -75,7 +75,7 @@ export default function LoginPage() {
         <div style={{backgroundImage:`url(${loginBg})`}} className='w-full h-screen bg-top bg-no-repeat bg-cover'>
             <BasicHeader logoImage={grayLogo} className="text-text-custom-gray" />
             <div className='w-full flex mt-8 p-6 sm:p-0'>
-                <div style={{direction:"rtl"}} className='w-full bg-white bg-opacity-60 rounded-lg sm:rounded-none sm:bg-inherit p-6 sm:p-0 flex justify-center sm:block sm:w-1/2'>
+                <div style={{direction:"rtl"}} className='w-full bg-white bg-opacity-60 rounded-lg sm:rounded-none sm:bg-inherit p-6 sm:p-0 lg:flex justify-center sm:block sm:w-1/2'>
                     <form action="" onSubmit={handleSubmit} className='w-full flex flex-col items-center sm:block'>
                         <div className='w-full sm:w-[370px] h-auto'>
                             <input value={phone_number} type="tel" placeholder='شماره تلفن خود را وارد کنید' name="phone_number" onChange={handleChange} onBlur={handleBlur}
