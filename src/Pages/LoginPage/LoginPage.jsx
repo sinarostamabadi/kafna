@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useId, useState } from 'react'
-import loginBg from "../../assets/image/loginBg.png"
+import loginBg1 from "../../assets/image/loginBg1.png"
 import { Link, useNavigate } from 'react-router-dom'
 import grayLogo from "../../assets/image/grayLogo.png"
 import { useFormik } from 'formik'
@@ -13,6 +13,7 @@ import { getOtp } from '../../app/auth/getOtp/getOtpThunkFunctions'
 import { Spinner } from '@chakra-ui/react'
 import { checkOtp } from '../../app/auth/checkOtp/checkOtpThunkFunctions'
 import { Toaster } from 'react-hot-toast'
+import { Card } from 'flowbite-react';
 
 
 
@@ -72,10 +73,12 @@ export default function LoginPage() {
 
   return (
     <div>
-        <div style={{backgroundImage:`url(${loginBg})`}} className='w-full h-screen bg-top bg-no-repeat bg-cover'>
+        <div style={{backgroundImage:`url(${loginBg1})`}} className='w-full h-screen bg-right bg-no-repeat bg-cover'>
+            <div className='min-h-screen flex flex-col justify-between'>
+            <div>
             <BasicHeader logoImage={grayLogo} className="text-text-custom-gray" />
             <div className='w-full flex mt-8 p-6 sm:p-0'>
-                <div style={{direction:"rtl"}} className='w-full bg-white bg-opacity-60 rounded-lg sm:rounded-none sm:bg-inherit p-6 sm:p-0 lg:flex justify-center sm:block sm:w-1/2'>
+                <div style={{direction:"rtl"}} className='w-full bg-white bg-opacity-60 rounded-lg sm:rounded-none sm:bg-inherit p-6 sm:p-0 justify-center sm:block sm:w-1/2'>
                     <form action="" onSubmit={handleSubmit} className='w-full flex flex-col items-center sm:block'>
                         <div className='w-full sm:w-[370px] h-auto'>
                             <input value={phone_number} type="tel" placeholder='شماره تلفن خود را وارد کنید' name="phone_number" onChange={handleChange} onBlur={handleBlur}
@@ -108,17 +111,12 @@ export default function LoginPage() {
                         <div className='w-full sm:w-[370px] h-14 rounded-2xl overflow-hidden'>
                             <button type='submit' className='w-full h-full text-white text-xl font-yekan bg-[#707070]' disabled={loading}>بزن بریم</button>
                         </div>
-                    </form>
-                    <div>
-                        <p className='text-base text-gray-700 font-yekan mt-2'>هنوز عضو نشدی؟ از <span className='text-blue-700'>
-                            <Link to={"/sign-up"}>
-                                اینجا
-                            </Link>
-                            </span> ثبت نام کنید</p>
-                    </div>
+                    </form>            
                 </div>
             </div>
+            </div>
             <BasicFooter image1={image1White} image2={image2White} />
+            </div>
         </div>
         <Toaster />
     </div>

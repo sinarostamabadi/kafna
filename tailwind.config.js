@@ -11,7 +11,8 @@ export default {
         yekan:"Yekan"
       },
       colors:{
-        "text-custom-gray":"#3A2244"
+        "text-custom-gray":"#3A2244",
+        "done-green":"#70e000"
       },
       padding:{
         "custom-padding-x":"64px"

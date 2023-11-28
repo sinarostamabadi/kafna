@@ -50,7 +50,7 @@ export default function ShopPage() {
         </header> */}
 
 <Navbar fluid className='shadow-sm sticky top-0'>
-      <Navbar.Brand href="https://flowbite-react.com">
+      <Navbar.Brand>
         <img src={grayLogo} className="mr-3 h-9 sm:h-9" />
         <span className="self-center whitespace-nowrap text-xl font-semibold capitalize">kafna shop</span>
       </Navbar.Brand>

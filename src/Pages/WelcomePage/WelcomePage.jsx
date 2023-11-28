@@ -29,27 +29,31 @@ export default function WelcomePage() {
     <div className='w-full h-screen flex justify-center items-center'>
         <Spinner className='w-[50px] h-[50px]' />
     </div> :
-    <div className='w-full h-screen bg-[#3A2244]'>
-        <BasicHeader logoImage={whiteLogo} className={"text-white"} />
-        <div className='w-full flex flex-col justify-center items-center'>
-            <div className='flex justify-center'>
-                <img className='w-[90%]' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
-            </div>
-            <div style={{direction:"rtl"}} className='text-4xl text-white font-yekan mt-2 flex gap-1'>
-                <p>
-                    {full_name}
-                </p>
-                <p>
-                    عزیز خوش اومدی
-                </p>
-            </div>
+    <div className='w-full min-h-screen bg-[#3A2244]'>
+        <div className='min-h-screen flex flex-col justify-between'>
             <div>
-                <Link to={"/choose-skill"}>
-                    <button className='px-6 py-2 rounded-3xl bg-[#35CB00] text-2xl text-white font-yekan mt-2'>بریم کار رو شروع کنیم</button>
-                </Link>
+                <BasicHeader logoImage={whiteLogo} className={"text-white"} />
+                <div className='w-full flex flex-col justify-center items-center'>
+                    <div className='flex justify-center'>
+                        <img className='w-[90%]' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
+                    </div>
+                    <div style={{direction:"rtl"}} className='text-4xl text-white font-yekan mt-2 flex gap-1'>
+                        <p>
+                            {full_name}
+                        </p>
+                        <p>
+                            عزیز خوش اومدی
+                        </p>
+                    </div>
+                    <div>
+                        <Link to={"/choose-skill"}>
+                            <button className='px-6 py-2 rounded-3xl bg-[#35CB00] text-2xl text-white font-yekan mt-2'>بریم کار رو شروع کنیم</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
+            <BasicFooter image1={image1White} image2={image2White} />
         </div>
-        <BasicFooter image1={image1White} image2={image2White} />
     </div>
     }
     </>

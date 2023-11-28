@@ -72,10 +72,8 @@ export default function SignUpPage() {
                 values:{
                     phone_number:phoneNumber,
                     password:values.password,
-                    profile:{
-                        ...values1,
-                        ...newValues
-                    }
+                    ...values1,
+                    ...newValues
                 },
                 navigate
             }))
@@ -87,13 +85,14 @@ export default function SignUpPage() {
 
 
   return (
-    <div className='w-full h-screen bg-white'>
+    <div className='w-full'>
+    <div className='w-full bg-white'>
         <BasicHeader logoImage={grayLogo} className={"text-text-custom-gray"} />
-        <div className='h-[calc(100vh-122px)] flex flex-col justify-between'>
+        <div className='flex flex-col justify-between'>
             {showPage===1 ? 
             <div className='w-full grid grid-cols-1 md:grid-cols-2 mt-8'>
                 <div className='w-full lg:w-[75%] lg:pl-24 flex justify-center lg:block'>
-                    <img className='w-[70%] lg:w-auto' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
+                    <img className='w-[50%] lg:w-auto' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
                 </div>
                 <div className='w-full flex justify-center items-center p-6 md:pr-36 md:pl-20'>
                     <form action="" className='w-full'>
@@ -157,7 +156,7 @@ export default function SignUpPage() {
                             <div className='w-full h-full flex justify-center items-center'><Spinner className='w-7 h-7' /></div>
                             :
                            <p>
-                               برو مرحله بعد
+                                برو مرحله بعد
                            </p>
                             }
                         </button>
@@ -168,21 +167,21 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1'>
                             <label style={{direction:"rtl"}} className={labelClassName} htmlFor="full_name">نام و نام خانوادگی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='full_name' name="full_name" value={values.full_name} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.full_name && touched.full_name && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.full_name && touched.full_name ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="major">رشته تحصیلی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='major' name='major' value={values.major} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.major && touched.major && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.major && touched.major ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="email">ایمیل</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='email' value={values.email} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.email && touched.email && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.email && touched.email ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
@@ -196,7 +195,7 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="national_id">کد ملی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='national_id' name='national_id' value={values.national_id} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.national_id && touched.national_id && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.national_id && touched.national_id ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
@@ -210,21 +209,21 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="birth_year">تاریخ تولد</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="date" id="birth_year" name="birth_year" value={values.birth_year} onChange={handleChange} onBlur={handleBlur}
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.birth_year && touched.birth_year && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.birth_year && touched.birth_year ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="institute_name">نام موسسه ی آموزشی</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id="institute_name" name="institute_name" value={values.institute_name} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.institute_name && touched.institute_name && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.institute_name && touched.institute_name ? "border border-red-500" : "border-none"}`}
                             />
                         </div>
 
                         <div className='w-full flex flex-col gap-1'>
                             <label className={labelClassName} htmlFor="education_year">آخرین مقطع تحصیلی</label>
                             <select style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='education_year' name="education_year" value={values.education_year} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.education_year && touched.education_year && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.education_year && touched.education_year ? "border border-red-500" : "border-none"}`}
                             >
                                 <option value="" selected disabled>مقطع تحصیلی</option>
                                 <option value="TEN">دهم</option>
@@ -240,7 +239,7 @@ export default function SignUpPage() {
                         <div className='w-full flex flex-col gap-1 relative'>
                             <label className={labelClassName} htmlFor="password">رمز ورود</label>
                             <input style={{boxShadow:"rgba(0, 0, 0, 0.16) 0px 1px 4px"}} type="text" id='password' name='password' value={values.password} onChange={handleChange} onBlur={handleBlur} 
-                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan border-none ${errors.password && touched.password && "border border-red-500"}`}
+                            className={`w-full h-full rounded-3xl bg-white px-2 text-base font-yekan ${errors.password && touched.password ? "border border-red-500" : "border-none"}`}
                             />
                             <div className='text-sm text-red-500 font-yekan absolute bottom-[-20px]'>{errors.password && touched.password && errors.password}</div>
                         </div>
@@ -252,15 +251,16 @@ export default function SignUpPage() {
 
 
 
-            <div className='w-fit flex justify-start p-4'>
+        </div>
+    </div>
+    <div className='w-fit flex justify-start p-4 mt-4'>
             <div>
                 <img src={image1Gray} alt="" />
             </div>
             <div>
                 <img src={image2Gray} alt="" />
             </div>
-            </div>
-        </div>
+    </div>
     </div>
   )
 }

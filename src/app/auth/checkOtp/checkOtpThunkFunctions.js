@@ -14,10 +14,8 @@ export let checkOtp=createAsyncThunk(actionTypes.checkOtp ,
             if(response.status===200) {
                 let jwt=response.data.jwt;
                 if(jwt) {
-                    navigate("/");
+                    navigate("/dashboard");
                     localStorage.setItem("jwt" , jwt);
-                } else if(!jwt) {
-                    toast.error("شما در سایت ثبت نام نکرده اید");
                 }
             }
         } catch(err) {

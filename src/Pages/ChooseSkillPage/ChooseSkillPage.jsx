@@ -32,7 +32,7 @@ export default function ChooseSkillPage() {
     } , [])
 
     let {skills , loading}=useSelector(state => state.getSkillsSlice);
-    let {userInfo}=useSelector(state => state.getUserInfoByJWTSlice);
+    let {userInfo , loading:userInfoLoading}=useSelector(state => state.getProfileSlice);
     let {info:profile , loading:profileLoading}=useSelector(state => state.profileSlice);
     let {info:certificates , loading:certificateLoading}=useSelector(state => state.certificateSlice);
     let {full_name , gender}=userInfo;
@@ -61,7 +61,7 @@ export default function ChooseSkillPage() {
     <div>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 mt-8'>
                     <div className='w-full lg:w-[75%] lg:pl-24 flex justify-center lg:block'>
-                        <img className='w-[70%] lg:w-auto' src={gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
+                        <img className='w-[70%] lg:w-auto' src={userInfo && userInfo.profile.gender==="FEMALE" ? avatarWomen : avatarMen} alt="" />
                     </div>
                     <div className='w-full p-6 md:pr-36 md:pl-20'>
                         <div>

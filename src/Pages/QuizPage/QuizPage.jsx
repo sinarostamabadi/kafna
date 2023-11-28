@@ -52,9 +52,9 @@ export default function QuizPage() {
                     toast.success("success");
                     console.log(response.data);
                 }
-                navigate("/quiz-result")
+                navigate("/dashboard")
             }catch(err){
-                navigate("/quiz-result")
+                navigate("/dashboard")
             }
         }
     })

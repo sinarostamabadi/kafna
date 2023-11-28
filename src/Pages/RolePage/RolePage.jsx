@@ -50,15 +50,14 @@ export default function RolePage() {
         }),
         onSubmit:async (values) => {
             setLoading(true);
-            let response=await client.post(baseUrl+"/api/core/workas/" , {values} , {
+            let response=await client.post(baseUrl+"/api/core/workas/" , {work_as:values.work_as} , {
                 headers:{
                     "Authorization": `Bearer ${localStorage.getItem("jwt")}`
                 }
             } );
 
             if(response.status===201) {
-                values.work_as==="EMPLOYEE" ? navigate("/find-work") : navigate("/freelance-exam")
-                setLoading(false);
+                navigate("/dashboard");
             }
         }
     })

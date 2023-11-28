@@ -10,12 +10,15 @@ import { getUserInfo } from "../getUserInformationByJWT/getUserInfoByJWTThunkFun
 export let signUp=createAsyncThunk(actionTypes.signUp , 
     async (params , thunkApi) => {
         let {values , navigate}=params;
-        let response=await client.post(api.signup , values);
+        let response=await client.post(api.profile , values , {
+            headers:{
+                "Authorization": `Bearer ${localStorage.getItem("jwt")}`
+            }
+        });
 
         if(response.status===201) {
-            localStorage.setItem("jwt" , response.data.jwt);
             thunkApi.dispatch(getUserInfo({jwt:response.data.jwt}))
-            navigate("/welcome");
+            navigate("/dashboard");
         }
     }
     )

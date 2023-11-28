@@ -1,3 +1,3 @@
 export let profile={
-    getProfile:"/api/core/profile/"
+    profile:"/api/core/profile/"
 }

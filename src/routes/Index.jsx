@@ -16,6 +16,8 @@ import RolePage from '../Pages/RolePage/RolePage';
 import SoonPage from '../Pages/SoonPage/SoonPage';
 import FindWork from '../Pages/FindWorkPage/FindWorkPage';
 import FreelancerExamPage from '../Pages/FreelancerExamPage/FreelancerExamPage';
+import LearnMorePage from '../Pages/LearnMorePage/LearnMorePage';
+import Dashboard from '../Pages/Dashboard/Dashboard';
 
 export default function Index() {
   return (
@@ -31,6 +33,8 @@ export default function Index() {
             <Route path='/role' element={<RolePage />} />
             <Route path='/find-work' element={<FindWork />} />
             <Route path='/freelance-exam' element={<FreelancerExamPage />} />
+            <Route path='/learn-more' element={<LearnMorePage />} />
+            <Route path='/dashboard' element={<Dashboard />} />
         </Route>
 
 

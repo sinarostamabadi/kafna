@@ -5,6 +5,7 @@ import { getSkillsSlice } from './auth/getSkills/getSkillsSlice';
 import { questionSlice } from './quiz/getQuestion/getQuestionSlice';
 import { profileSlice } from './profile/getProfile/getProfileSlice';
 import { certificateSlice } from './profile/getCertificates/getCertificatesSlice';
+import { getProfileSlice } from './auth/getProfile/getProfileSlice';
 
 export let reducer={
     getOtpSlice,
@@ -13,5 +14,6 @@ export let reducer={
     getSkillsSlice,
     questionSlice,
     profileSlice,
-    certificateSlice
+    certificateSlice,
+    getProfileSlice
 }
